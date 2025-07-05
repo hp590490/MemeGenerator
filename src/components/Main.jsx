@@ -39,9 +39,9 @@ const Main = () => {
   }
 
   return (
-    <main className="p-10">
+    <main className="min-h-screen flex flex-col items-center px-4 py-10">
       <form onSubmit={handleNewMeme}>
-        <div className="flex justify-center items-center gap-8 mb-6">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-6">
           <div className="flex flex-col">
             <label
               htmlFor="topText"
@@ -79,21 +79,21 @@ const Main = () => {
         </div>
 
         <div className="flex justify-center">
-          <button className="px-8 py-2 bg-blue-700 text-white rounded-lg">
+          <button className="px-6 py-2 bg-blue-700 text-white rounded-lg w-full sm:w-auto text-center">
             🖼️ Obtenir une nouvelle image
           </button>
         </div>
       </form>
-      <div className="mt-8 relative w-full h-80">
+      <div className="mt-8 relative w-full h-64 sm:h-80 md:h-[28rem]">
         <img
           src={meme.imageUrl}
           alt="image du même"
           className="w-full h-full object-contain"
         />
-        <span className="absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-2xl font-extrabold uppercase drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
+        <span className="absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl md:text-2xl font-extrabold uppercase drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
           {meme.topText}
         </span>
-        <span className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white text-2xl font-extrabold uppercase drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
+        <span className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl md:text-2xl font-extrabold uppercase drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
           {meme.bottomText}
         </span>
       </div>
